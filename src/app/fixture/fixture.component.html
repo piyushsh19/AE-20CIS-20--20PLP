@@ -1,0 +1,42 @@
+<h1>Fixture & Results</h1>
+<button>All Months    <i class="fal fa-solid fa-filter"></i> </button>
+  <button>All Teams   <i class="fal fa-solid fa-filter"></i> </button>
+
+<div class="card">
+  <div class="card-body">
+        <table mat-table [dataSource]="xmlItems" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="Kick-Off">
+              <th mat-header-cell *matHeaderCellDef>Kick-Off (BST)</th>
+              <td mat-cell *matCellDef="let element "> {{element.MatchDataDate | date:"dd MMM  h:mm a"}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="Matches">
+              <th mat-header-cell *matHeaderCellDef> Matches </th>
+              <td mat-cell *matCellDef="let element"> {{element.MatchHome}} ( {{element.ScoreHome}} - {{element.ScoreAway}} ) {{element.MatchAway}} </td>
+              
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="Venue">
+              <th mat-header-cell *matHeaderCellDef> Venue </th>
+              <td mat-cell *matCellDef="let element of xmlItems"> {{element.Venue}},{{element.City}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Link">
+              <th mat-header-cell *matHeaderCellDef> Link </th>
+              <td mat-cell *matCellDef="let element of xmlItems" style="cursor: pointer"  [routerLink]="['/livematch',this.element.ids]" > {{'--->'}} </td>
+            </ng-container>
+          
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+        </div>
+      </div>

@@ -1,0 +1,7 @@
+<nav><img src="../assets/images/navlogo.png"  /></nav>
+<app-sidebar (onToggleSideNav)="onToggleSideNav($event)"></app-sidebar>
+<app-body
+    [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth"
+></app-body>
+<footer><img src="../assets/images/aelogo.jpg" class="aelogo"></footer>

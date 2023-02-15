@@ -1,0 +1,39 @@
+
+.container-card{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+}
+h1{
+  text-align: center;
+}
+
+.livecard{
+    display: flex;
+    flex-direction: row;
+    
+  }
+ 
+  table{
+    color: #37003C;
+    width: 100%;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.032);
+    box-shadow: none;
+
+  }
+  td{
+    color: rgb(95, 22, 111);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .left {
+    text-align: right;
+    border-right: blueviolet 1px solid;
+  }
+  .right{
+    border-left: blueviolet 1px solid;
+  }

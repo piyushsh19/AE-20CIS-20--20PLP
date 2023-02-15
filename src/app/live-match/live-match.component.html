@@ -1,0 +1,55 @@
+<app-navheader></app-navheader>
+
+<div class="card">
+  <app-scoreheader></app-scoreheader>
+ 
+
+  <div class="card-body" >
+        <table mat-table [dataSource]="xmlItems" style="width: 33%;" class="mat-elevation-z8">
+
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="number">
+              <th mat-header-cell *matHeaderCellDef>Position</th>
+              <td mat-cell *matCellDef="let element "> {{element.positionHome}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.nameHome}}</td>
+              
+            </ng-container>
+          
+          
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+          
+          <table mat-table [dataSource]="xmlItems2" style="width: 33%;" class="mat-elevation-z8">
+
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="number">
+              <th mat-header-cell *matHeaderCellDef>Position</th>
+              <td mat-cell *matCellDef="let element ">  {{element.positionAway}}</td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.nameAway}}</td>
+              
+            </ng-container>
+          
+          
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+          
+        </div>
+      </div>

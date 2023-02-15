@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://omo.akamai.opta.net/",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

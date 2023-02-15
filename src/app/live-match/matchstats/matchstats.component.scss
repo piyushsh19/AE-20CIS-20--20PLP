@@ -1,0 +1,32 @@
+.row {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;   
+    border-collapse: collapse; 
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+.row td {
+    width: 33%;
+    border-bottom: 1px rgb(233, 233, 233) solid;
+}
+.first{
+    text-align: right;
+    padding: 15px;
+
+}
+
+.second{
+    background-color: #91079e08;
+    color: rgb(62, 3, 78);
+    font-weight: 500;
+
+}
+
+.third {
+    text-align: left;
+    padding: 15px;
+}

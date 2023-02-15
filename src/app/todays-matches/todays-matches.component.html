@@ -1,0 +1,63 @@
+<h1>Todays Matches</h1>
+<div class="container">  
+  <form [formGroup]="rangeFormGroup">  
+    <div>  
+      <mat-form-field appearance="fill">  
+        <mat-label>Enter a date range</mat-label>  
+        <mat-date-range-input [rangePicker]="picker">   
+          <input matStartDate placeholder="Start date" formControlName="start">  
+          <input matEndDate placeholder="End date" formControlName="end">  
+        </mat-date-range-input>  
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>  
+        <mat-date-range-picker #picker></mat-date-range-picker>  
+        <mat-error>Date Range is mandatory</mat-error>  
+      </mat-form-field>  
+    </div>  
+    <button mat-button color="primary" class="primary" (click)="applyFilter()">Submit</button>
+  </form>  
+  <!-- <div class="json">  
+    <code><pre>{{rangeFormGroup.value | json}}</pre></code>  
+  </div>   -->
+</div> 
+<!-- <mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput placeholder="Filter" (keyup)="filterChange($event)">
+</mat-form-field> -->
+
+<div class="card">
+  <div class="card-body">
+        <table mat-table [dataSource]="xmlItems" *ngIf="xmlItems.length > 0 "  class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="Kick-Off">
+              <th mat-header-cell *matHeaderCellDef> Kick-off (BST)</th>
+              <td mat-cell *matCellDef="let element" > {{element.MatchDataDate | date:"dd MMM  h:mm a" }} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="Matches">
+              <th mat-header-cell *matHeaderCellDef> Matches </th>
+              <td mat-cell *matCellDef="let element"> {{element.MatchHome}} - {{element.MatchAway}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="Status">
+              <th mat-header-cell *matHeaderCellDef> Status </th>
+              <td mat-cell *matCellDef="let element"> {{element.MatchDataStatus}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="Links">
+              <th mat-header-cell *matHeaderCellDef> Links </th>
+              <td mat-cell *matCellDef="let element"  [routerLink]="['/livematch',this.element.ids]" > {{element.symbol}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <div *ngIf="xmlItems.length === 0">No Live Matches</div>
+        </div>
+      </div>

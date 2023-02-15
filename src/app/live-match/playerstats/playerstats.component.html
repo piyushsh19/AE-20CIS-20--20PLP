@@ -1,0 +1,45 @@
+<app-navheader></app-navheader>
+<div class="card" >
+    <app-scoreheader></app-scoreheader>
+
+    <div class="card-body" >
+        <div class="card-head" > 
+            <button routerLink="/playerstats" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> Passes & Touches</button>
+            <button routerLink="/playerstats/possession" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Possession & Distance</button>
+            <button routerLink="/playerstats/chances" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Chances & Shots</button>
+       
+        </div>
+        
+<div class="row">
+    <div class="column">
+        <h1>Most Touches</h1>
+      <app-subcards></app-subcards>
+    </div>
+  
+    <div class="column">
+        <h1>Fewest Touches</h1>
+    <app-subcards></app-subcards>
+    </div>
+    <div class="column">
+        <h1>Most Touches in Opposition Box</h1>
+      <app-subcards></app-subcards>
+    </div>
+  
+    <div class="column">
+        <h1>Passing Accuracy</h1>
+    <app-subcards></app-subcards>
+    </div>
+    <div class="column">
+        <h1>Most Passes Completed</h1>
+      <app-subcards></app-subcards>
+    </div>
+  
+    <div class="column">
+        <h1>Fewest Passes Completed</h1>
+    <app-subcards></app-subcards>
+    </div>
+    
+       
+    
+</div>
+</div>

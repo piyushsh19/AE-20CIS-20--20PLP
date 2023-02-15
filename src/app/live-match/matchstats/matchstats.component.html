@@ -1,0 +1,166 @@
+<app-navheader></app-navheader>
+<div class="card">
+  <app-scoreheader></app-scoreheader>
+
+  <div class="card-body" >
+    <table class="row">
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Possession %</td>
+      <td class="third">56</td>
+    </tr>
+    
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Possession% last 5</td>
+      <td class="third">56</td>
+    </tr>
+
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Possession% last 10</td>
+      <td class="third">56</td>
+    </tr>
+
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Possession% last 15</td>
+      <td class="third">56</td>
+    </tr>
+
+    <tr >
+      <td class="first" >4 </td>
+      <td class="second">Passes Completed</td>
+      <td class="third">56</td>
+    </tr>
+
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Passing Accuracy</td>
+      <td class="third">56</td>
+    </tr>
+
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Corners</td>
+      <td class="third">56</td>
+    </tr>
+
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Shots</td>
+      <td class="third">56</td>
+    </tr>
+
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Shots on Target</td>
+      <td class="third">56</td>
+    </tr>
+
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Expected Goals</td>
+      <td class="third">56</td>
+    </tr>
+
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Touches in Opposition Box</td>
+      <td class="third">56</td>
+    </tr>
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Final Third Entries</td>
+      <td class="third">56</td>
+    </tr>
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Open Play Crosses</td>
+      <td class="third">56</td>
+    </tr>
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Possession Won in Final Third</td>
+      <td class="third">56</td>
+    </tr>
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Fouls</td>
+      <td class="third">56</td>
+    </tr>
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Cards</td>
+      <td class="third">56</td>
+    </tr>
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Distance Covered</td>
+      <td class="third">56</td>
+    </tr>
+    <tr>
+      <td class="first">46 </td>
+      <td class="second">Sprints</td>
+      <td class="third">56</td>
+    </tr>
+  </table>
+
+    <table >
+      <tr style="color: red;" *ngFor="let vals of home">
+        {{vals[1]}}
+
+      </tr>
+      
+    </table>
+    <table mat-table [dataSource]="home" style="width: 33%;" class="mat-elevation-z8">
+
+          
+      <!-- Position Column -->
+      <ng-container matColumnDef="number">
+        <th mat-header-cell *matHeaderCellDef>Possession</th>
+        
+        <td mat-cell *matCellDef="let element"> {{element.corner}} - {{element.possession}} -- {{element.shots}}{{element.passes}} {{element.final_third_entries}}</td><td mat-cell *matCellDef="let element "> {{element.possession}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+    
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+   
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+<!-- <Stat FH="3" SH="5" Type="corner_taken">8</Stat>
+<Stat FH="2" SH="3" Type="ontarget_scoring_att">5</Stat>
+
+<Stat FH="1" SH="5" Type="poss_won_att_3rd">6</Stat>
+<Stat FH="25" SH="33" Type="final_third_entries">58</Stat>
+<Stat FH="9" SH="14" Type="total_cross">23</Stat>
+<Stat FH="4" SH="1" Type="fk_foul_won">5</Stat>
+<Stat FH="2" SH="4" Type="crosses_18yard">6</Stat>
+<Stat FH="17" SH="12" Type="touches_in_opp_box">29</Stat>
+<Stat FH="154" SH="149" Type="total_pass">303</Stat>
+<Stat FH="7" SH="11" Type="poss_won_def_3rd">18</Stat>
+<Stat FH="40.8" SH="46.2" Type="possession_percentage">43.3</Stat>
+<Stat FH="95" SH="90" Type="accurate_pass">185</Stat>
+<Stat FH="3" SH="1" Type="goals_conceded">4</Stat>
+<Stat FH="55" SH="54" Type="total_final_third_passes">109</Stat>
+<Stat FH="3" SH="3" Type="won_corners">6</Stat> -->
+
+<!-- 
+<Stat FH="4" SH="1" Type="fk_foul_won">5</Stat>
+<Stat FH="10" SH="10" Type="fk_foul_lost">20</Stat>
+<Stat FH="7" SH="4" Type="attempted_tackle_foul">11</Stat>
+<Stat FH="2" SH="1" Type="fouled_final_third">3</Stat> -->

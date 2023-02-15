@@ -1,0 +1,79 @@
+nav{
+    background: #37003C;
+    transition: all .5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 7vh;
+    border-bottom: #0DE5FF 2px solid ;
+    
+
+}
+img{
+    text-align: center;
+    width: 250px;
+    margin-left: 20px;
+}
+
+footer{
+    background: #37003C;
+    transition: all .5s ease;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    border-top: #0DE5FF 2px solid ;
+}
+.aelogo {
+    width: 120px;
+    margin: 8px 20px 5px 0px;   
+     float: right;
+
+
+}
+
+@media (max-width: 480px) {
+    img{
+        text-align: center;
+        width: 180px;
+        margin-left: 20px;
+    }
+}
+  
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    img{
+        text-align: center;
+        width: 180px;
+        margin-left: 20px;
+    }
+}
+  
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    img{
+        text-align: center;
+        width: 260px;
+        margin-left: 20px;
+    }
+}
+  
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1680px){
+    img{
+        text-align: center;
+        width: 200px;
+        margin-left: 20px;
+    }
+}
+  
+/* Media Query for Large screens */
+@media (min-width: 1681px) {
+    img{
+        text-align: center;
+        width: 260px;
+        margin-left: 20px;
+    }
+}

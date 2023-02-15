@@ -1,0 +1,40 @@
+
+nav{
+    background-color: #37003C;
+    margin: 15px;
+    border-radius: 5px;
+    height: 5vh;
+    color: white;
+    font-size: 24px;
+    
+}
+  .container{
+    display: flex;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    justify-content: space-between;
+   
+ }
+ .container img {
+ background-color: white;
+
+ height: 5vh;
+ width: 5vh;
+ }
+ .teamHome{
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+ }
+ .score{
+    background-color: blueviolet;
+    height: 5vh;
+    text-align: center;
+    width: 10vw;
+    justify-content: center;
+    padding: 15px;
+ }
+ .scorediv{
+ }

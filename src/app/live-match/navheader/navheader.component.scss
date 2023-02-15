@@ -1,0 +1,30 @@
+.card-head{
+    margin: 0px;
+    padding: 0px;
+}
+.card-head, button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px ;
+    margin: 0px 10px 0px 10px;
+  color: #37003C;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  font-family: 'Poppins', sans-serif;
+
+}
+ button:hover{
+    color: white;
+    background-color: #37003C;
+    cursor: pointer;
+ }
+ .active{
+    background-color: #37003C;
+    color: white;
+ }
+
+.card{
+    margin-top: 0px;
+}

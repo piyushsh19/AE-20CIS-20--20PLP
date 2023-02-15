@@ -1,0 +1,51 @@
+table {
+    width: 100%;
+    box-shadow: none;
+  }
+  tr.mat-row:nth-child(odd){
+    background-color: #91079e08;
+  }
+  
+  .mat-cell{
+    color: #37003C ;
+  }
+  td.mat-cell{
+    color: #37003C ;
+    border-bottom: none;
+  }
+  tr.mat-row:hover{
+    background-color:  #0DE5FF;
+    cursor: pointer;
+    
+  }
+  .mat-table{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  
+    
+  }
+  th{
+    font-weight: 600;
+    font-size: 14px;
+  }
+  h1{
+    font-weight: bold;
+    color: #37003C;
+  }
+  button{
+    padding: 10px 35px ;
+    border: 1px #37003C solid;
+    color: #37003C;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  button:hover{
+    background-color: blueviolet ;
+    color: white;
+  }
+  .card-body{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly ;
+  }
+ 

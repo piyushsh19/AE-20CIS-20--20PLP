@@ -1,0 +1,15 @@
+<nav>
+    <div class="container">
+        <img src="../../assets/images/premier.png">
+        <div class="teamHome" *ngFor="let name of xmlItems">               
+             {{name.homeName}}
+        </div>
+        <div class="score" *ngFor="let name of xmlItems">
+            {{name.homescore}} - {{name.awayscore}}
+        </div>
+        <div class="awayTeam" *ngFor="let name of xmlItems">
+           {{name.awayName}} 
+        </div>
+        <img src="../../assets/images/premier.png">
+    </div>
+</nav>
